@@ -1,7 +1,3 @@
-# Chương trình Training: **Linux Cơ Bản**
-
----
-
 ## Phần 1: Giới thiệu tổng quan về Linux
 
 1. **Linux là gì?**
