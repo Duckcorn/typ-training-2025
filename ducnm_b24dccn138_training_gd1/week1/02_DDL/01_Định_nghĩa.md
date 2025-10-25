@@ -27,7 +27,15 @@ CREATE TABLE ten_bang (
 ALTER TABLE ten_bang
     [hanh_dong];
 
+```
 
+### 3. DROP TABLE
+**Mục đích:** Lệnh này được sử dụng để **xóa vĩnh viễn** một bảng và **toàn bộ dữ liệu bên trong** bảng đó.  
+> ⚠️ Sau khi thực hiện, **bảng sẽ bị xóa hoàn toàn** — không thể khôi phục nếu không có bản sao lưu.  
+
+**Cú pháp:**  
+```sql
+DROP TABLE ten_bang;
 
 
 
