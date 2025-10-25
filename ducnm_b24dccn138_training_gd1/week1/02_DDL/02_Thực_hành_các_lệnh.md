@@ -28,3 +28,21 @@ CREATE TABLE Readers(
 	 CONSTRAINT pk_Readers PRIMARY KEY(reader_id)
 );
 ```
+
+# 3. Tạo bảng BOOK_RECORDS
+**Mục đích:**
+Tạo bảng `BOOK RECORDS` trong cơ sở dữ liệu để lưu thông tin mượn sách.
+
+**Cú pháp SQL:**
+```sql
+CREATE TABLE BOOK_RECORDS(
+	borrow_id INT,
+	reader_id INT,
+	book_id INT,
+	borrow_date DATE,
+	return_date DATE,
+	Statuss VARCHAR(20) DEFAULT 'Đang mượn',
+	FOREIGN KEY(reader_id) REFERENCES Readers(reader_id),
+	FOREIGN KEY(book_id) REFERENCES BOOKS(book_id)
+)
+```
