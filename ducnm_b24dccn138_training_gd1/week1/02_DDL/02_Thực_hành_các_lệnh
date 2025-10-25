@@ -1,1 +1,10 @@
-
+#1. Tạo bảng BOOKS
+```sql
+CREATE TABLE BOOKS(
+	book_id INT,
+	tittle VARCHAR(200) NOT NULL,
+	author VARCHAR(100),
+	category VARCHAR(50),
+	year_published INT,
+	CONSTRAINT pk_BOOKS PRIMARY KEY(book_id)
+)
