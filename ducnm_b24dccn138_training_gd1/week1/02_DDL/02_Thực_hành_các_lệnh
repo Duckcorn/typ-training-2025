@@ -1,7 +1,5 @@
-# 1. Tạo bảng BOOKS
-
 **Mục đích:**  
-Tạo bảng `BOOKS` trong cơ sở dữ liệu để lưu thông tin về sách, bao gồm **mã sách, tiêu đề, tác giả, thể loại, năm xuất bản**.
+Tạo bảng <span style="color:blue;">BOOKS</span> trong cơ sở dữ liệu để lưu thông tin về sách.
 
 **Cú pháp SQL:**
 ```sql
@@ -13,3 +11,4 @@ CREATE TABLE BOOKS (
     year_published INT,
     CONSTRAINT pk_BOOKS PRIMARY KEY (book_id)
 );
+```
