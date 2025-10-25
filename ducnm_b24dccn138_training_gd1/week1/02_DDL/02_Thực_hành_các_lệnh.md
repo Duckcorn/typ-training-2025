@@ -79,3 +79,9 @@ FROM
 WHERE
     category = 'Romantic';
 ```
+
+# 7. XÓA VIEW_Romantic
+**Cú pháp SQL:**
+```sql
+DROP VIEW View_FictionBooks;
+```
