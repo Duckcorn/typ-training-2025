@@ -14,3 +14,16 @@ CREATE TABLE BOOKS (
     CONSTRAINT pk_BOOKS PRIMARY KEY (book_id)
 );
 ```
+# 2. Tạo bảng Readers
+**Mục đích:**
+Tạo bảng `Readers` trong cơ sở dữ liệu để lưu thông tin người đọc.
+**Cú pháp SQL:**
+```sql
+CREATE TABLE Readers(
+	 reader_id INT,
+	 name VARCHAR(20) NOT NULL,
+	 living VARCHAR(200),
+	 phone VARCHAR(15),
+	 CONSTRAINT pk_Readers PRIMARY KEY(reader_id)
+);
+```
