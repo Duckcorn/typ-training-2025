@@ -1,4 +1,4 @@
-## 🧱 **DDL (Data Definition Language)**  
+## DDL (Data Definition Language)**  
 > **DDL** là tập hợp các lệnh SQL dùng để **định nghĩa, tạo, sửa đổi và xóa cấu trúc** của cơ sở dữ liệu.  
 > Nó tập trung vào **khung (schema)** của cơ sở dữ liệu chứ **không tác động trực tiếp đến dữ liệu** bên trong.
 
