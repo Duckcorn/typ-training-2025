@@ -4,7 +4,7 @@
 
 ---
 
-### ⚙️ **1. CREATE TABLE**
+### 1. CREATE TABLE
 **Mục đích:** Tạo một bảng mới trong cơ sở dữ liệu.  
 
 **Cú pháp:**
