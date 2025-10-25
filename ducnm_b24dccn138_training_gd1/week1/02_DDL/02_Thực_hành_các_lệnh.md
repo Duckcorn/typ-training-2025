@@ -81,6 +81,9 @@ WHERE
 ```
 
 # 7. XÓA VIEW_Romantic
+**Mục đích:**  
+Xóa vĩnh viễn view `View_Romantic`. Dữ liệu trong bảng `BOOKS` **không bị ảnh hưởng**. 
+
 **Cú pháp SQL:**
 ```sql
 DROP VIEW View_FictionBooks;
