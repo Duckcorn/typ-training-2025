@@ -46,3 +46,10 @@ CREATE TABLE BOOK_RECORDS(
 	FOREIGN KEY(book_id) REFERENCES BOOKS(book_id)
 )
 ```
+
+# 4. Xóa bảng Readers
+
+**Cú pháp SQL:**
+```sql
+DROP TABLE Readers;
+```
