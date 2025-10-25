@@ -17,6 +17,8 @@ CREATE TABLE ten_bang (
     ...
 );
 
+```
+
 ### 2. ALTER TABLE
 **Mục đích:** Sửa đổi cấu trúc của một bảng đã tồn tại — có thể **thêm, sửa, hoặc xóa** cột, hoặc **thay đổi ràng buộc**.  
 
