@@ -60,3 +60,22 @@ DROP TABLE Readers;
 ALTER TABLE BOOK_RECORDS(
 	ADD COLUMN name VARCHAR(50)
 );	
+```
+
+#6. CREATE VIEW: View sách theo thể loại Romantic**
+**Mục đích:**  
+Tạo một **view ảo** để hiển thị tất cả sách thuộc thể loại `Romantic` trong bảng `BOOKS`.  
+
+**Cú pháp SQL:**
+```sql
+CREATE VIEW View_Romantic AS
+SELECT
+    book_id,
+    tittle,
+    author,
+    year_published
+FROM
+    BOOKS
+WHERE
+    category = 'Romantic';
+```
