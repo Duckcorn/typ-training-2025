@@ -53,3 +53,10 @@ CREATE TABLE BOOK_RECORDS(
 ```sql
 DROP TABLE Readers;
 ```
+
+# 5. Thêm cột name trong BOOK_RECORDS
+**Cú pháp SQL:**
+```sql
+ALTER TABLE BOOK_RECORDS(
+	ADD COLUMN name VARCHAR(50)
+);	
