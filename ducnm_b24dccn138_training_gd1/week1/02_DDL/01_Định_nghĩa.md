@@ -57,5 +57,12 @@ WHERE
     [dieu_kien];
 
 ```
+### 5. DROP VIEW
+**Mục đích:**  
+Lệnh này dùng để **xóa vĩnh viễn** một view đã tồn tại.  
+> ⚠️ Lưu ý: Chỉ xóa **định nghĩa view**, **không xóa dữ liệu** trong bảng gốc.  
 
-
+**Cú pháp:**  
+```sql
+DROP VIEW ten_view;
+```
