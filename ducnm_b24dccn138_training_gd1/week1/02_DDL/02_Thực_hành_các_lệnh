@@ -1,10 +1,15 @@
-#1. Tạo bảng BOOKS
+# 1. Tạo bảng BOOKS
+
+**Mục đích:**  
+Tạo bảng `BOOKS` trong cơ sở dữ liệu để lưu thông tin về sách, bao gồm **mã sách, tiêu đề, tác giả, thể loại, năm xuất bản**.
+
+**Cú pháp SQL:**
 ```sql
-CREATE TABLE BOOKS(
-	book_id INT,
-	tittle VARCHAR(200) NOT NULL,
-	author VARCHAR(100),
-	category VARCHAR(50),
-	year_published INT,
-	CONSTRAINT pk_BOOKS PRIMARY KEY(book_id)
-)
+CREATE TABLE BOOKS (
+    book_id INT,
+    tittle VARCHAR(200) NOT NULL,
+    author VARCHAR(100),
+    category VARCHAR(50),
+    year_published INT,
+    CONSTRAINT pk_BOOKS PRIMARY KEY (book_id)
+);
