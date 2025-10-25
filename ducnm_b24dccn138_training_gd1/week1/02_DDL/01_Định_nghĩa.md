@@ -37,5 +37,25 @@ ALTER TABLE ten_bang
 ```sql
 DROP TABLE ten_bang;
 
+```
+### 4. CREATE VIEW
+**Mục đích:**  
+Lệnh này được sử dụng để **tạo một View (bảng ảo)** trong cơ sở dữ liệu.  
+View **không lưu dữ liệu thực tế**, mà chỉ lưu **câu truy vấn SELECT**.  
+Khi truy cập view, hệ thống sẽ **thực thi lại câu SELECT** để lấy dữ liệu mới nhất.  
+
+**Cú pháp:**  
+```sql
+CREATE VIEW ten_view AS
+SELECT
+    cot_1,
+    cot_2,
+    ...
+FROM
+    ten_bang
+WHERE
+    [dieu_kien];
+
+```
 
 
