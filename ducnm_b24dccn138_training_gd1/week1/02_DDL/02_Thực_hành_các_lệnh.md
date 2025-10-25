@@ -62,8 +62,7 @@ ALTER TABLE BOOK_RECORDS(
 );	
 ```
 
-#6. CREATE VIEW: View sách theo thể loại Romantic**
-
+#6. CREATE VIEW: View sách theo thể loại Romantic
 **Mục đích:**  
 Tạo một **view ảo** để hiển thị tất cả sách thuộc thể loại `Romantic` trong bảng `BOOKS`.  
 
