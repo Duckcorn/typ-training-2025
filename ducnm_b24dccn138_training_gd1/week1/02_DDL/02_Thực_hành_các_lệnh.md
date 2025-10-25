@@ -17,6 +17,7 @@ CREATE TABLE BOOKS (
 # 2. Tạo bảng Readers
 **Mục đích:**
 Tạo bảng `Readers` trong cơ sở dữ liệu để lưu thông tin người đọc.
+
 **Cú pháp SQL:**
 ```sql
 CREATE TABLE Readers(
