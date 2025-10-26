@@ -6,4 +6,12 @@
 > - **Xóa dữ liệu** (DELETE)
 > - **Truy vấn dữ liệu** (SELECT)
 
+# 1. INSERT
+**Mục đích:**  
+Thêm dữ liệu mới vào bảng trong cơ sở dữ liệu.
 
+**Cú pháp SQL:**
+```sql
+INSERT INTO ten_bang (cot_1, cot_2, ...)
+VALUES (gia_tri_1, gia_tri_2, ...);
+```
