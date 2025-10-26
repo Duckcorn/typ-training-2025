@@ -78,3 +78,22 @@ END;
              +UPDATE BOOKS SET status = 'Đang mượn': Nghĩa là mỗi khi sách được mượn, trạng thái của sách đó sẽ tự động đổi để biết sách đang được mượn.  
              +FROM BOOKS B INNER JOIN INSERTED I ON B.book_id = I.book_id: thực hiện việc so sánh book_id giữa BOOKS và INSERTED, chỉ sách tương ứng với dòng vừa mượn được chọn để cập nhật trạng thái, các sách khác không bị ảnh hưởng.
              
+
+# 4. COMMIT
+
+**Mục tiêu:**
+Giả sử bạn thêm một số bản ghi vào BOOK_RECORDS trong một giao dịch:
+
+**Cú pháp SQL:**
+```sql
+BEGIN TRANSACTION;
+
+INSERT INTO BOOK_RECORDS (borrow_id, reader_id, book_id, borrow_date, return_date, Statuss)
+VALUES (6, 2, 3, '2025-10-20', NULL, 'Đang mượn');
+
+INSERT INTO BOOK_RECORDS (borrow_id, reader_id, book_id, borrow_date, return_date, Statuss)
+VALUES (7, 3, 4, '2025-10-21', NULL, 'Đang mượn');
+
+COMMIT;
+```
+#Lưu ý: COMMIT chỉ cần khi bạn dùng giao dịch thủ công, còn INSERT bình thường thì hệ thống auto-commit giúp bạn không cần gọi COMMIT.
