@@ -15,3 +15,28 @@ Thêm dữ liệu mới vào bảng trong cơ sở dữ liệu.
 INSERT INTO ten_bang (cot_1, cot_2, ...)
 VALUES (gia_tri_1, gia_tri_2, ...);
 ```
+
+# 2. UPDATE
+**Mục đích:**  
+Cập nhật dữ liệu hiện có trong bảng theo điều kiện xác định.
+
+**Cú pháp SQL:**
+```sql
+UPDATE ten_bang
+SET cot_1 = gia_tri_moi_1,
+    cot_2 = gia_tri_moi_2,
+    ...
+WHERE dieu_kien;
+```
+
+# 3. DELETE
+**Mục đích:**  
+Xóa dữ liệu khỏi bảng theo điều kiện.
+
+⚠️ Sau khi thực hiện, dữ liệu bị xóa **không thể khôi phục** nếu không có bản sao lưu.
+
+**Cú pháp SQL:**
+```sql
+DELETE FROM ten_bang
+WHERE dieu_kien;
+```
