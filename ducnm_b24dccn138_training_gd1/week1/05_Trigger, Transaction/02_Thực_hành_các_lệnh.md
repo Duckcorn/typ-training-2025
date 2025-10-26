@@ -24,3 +24,27 @@ END;
 ```sql
 EXEC AddBorrowRecord 6, 2, 3, '2025-10-26';
 ```
+
+# 2. CREATE FUNCTION
+
+**Mục tiêu:**
+Giả sử muốn tạo hàm để kiểm tra xem một cuốn sách có đang được mượn hay không
+
+**Cú pháp SQL:**
+```sql
+CREATE FUNCTION CHECK_BOOK(@book_id INT)
+RETURN VARCHAR(20)
+AS
+BEGIN
+DECLARE @status VARCHAR(20);
+    SELECT @status = Statuss
+    FROM BOOK_RECORDS
+    WHERE book_id = @book_id
+      AND Statuss = 'Đang mượn';
+    
+    IF @status IS NULL
+        RETURN 'Chưa mượn';
+    ELSE
+        RETURN 'Đang mượn';
+END;
+```
