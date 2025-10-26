@@ -13,3 +13,13 @@ Nhờ đó, người được cấp quyền có thể **thực hiện các thao 
 ```sql
 GRANT quyen ON ten_bang TO nguoi_dung;
 ```
+
+# 2. REVOKE
+**Mục đích:**  
+Câu lệnh `REVOKE` dùng để **thu hồi quyền** đã cấp trước đó từ người dùng (user) hoặc nhóm người dùng (role) trên cơ sở dữ liệu, bảng, cột hoặc thủ tục.  
+Nhờ đó, người bị thu hồi quyền sẽ **không còn thực hiện các thao tác như SELECT, INSERT, UPDATE, DELETE…** nữa.
+
+**Cú pháp SQL:**
+```sql
+REVOKE quyen ON ten_bang FROM nguoi_dung;
+```
