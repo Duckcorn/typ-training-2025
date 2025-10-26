@@ -1,4 +1,4 @@
-1.# DCL (Data Control Language)
+## DCL (Data Control Language)
 
 **Định nghĩa:**  
 > **DCL** là tập hợp các câu lệnh SQL dùng để **quản lý quyền truy cập và bảo mật dữ liệu** trong cơ sở dữ liệu.  
