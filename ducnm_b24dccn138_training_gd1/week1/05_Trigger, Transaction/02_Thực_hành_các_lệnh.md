@@ -48,3 +48,9 @@ DECLARE @status VARCHAR(20);
         RETURN 'Đang mượn';
 END;
 ```
+
+-Có thể sử dụng hàm trong câu lệnh SELECT để kiểm tra trạng thái mượn sách
+**Cú pháp SQL:**
+```sql
+SELECT dbo.CHECK_BOOK(3)
+```
