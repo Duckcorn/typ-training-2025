@@ -96,4 +96,4 @@ VALUES (7, 3, 4, '2025-10-21', NULL, 'Đang mượn');
 
 COMMIT;
 ```
-# Lưu ý: COMMIT chỉ cần khi bạn dùng giao dịch thủ công, còn INSERT bình thường thì hệ thống auto-commit giúp bạn không cần gọi COMMIT.
+**Lưu ý:** COMMIT chỉ cần khi bạn dùng giao dịch thủ công, còn INSERT bình thường thì hệ thống auto-commit giúp bạn không cần gọi COMMIT.
