@@ -72,9 +72,40 @@ VALUES (5, 5, 3, '2025-09-30', '2025-10-12', 'Đã trả');
 **Cú pháp SQL:**
 ```sql
 UPDATE BOOKS
-SET year_published = 1926
-WHERE book_id = 3;
+SET category = 'Science Fiction'
+WHERE tittle = '1984';
 ```
 
+# 3. DELETE
 
+**Mục tiêu:** 
+Xóa các sách xuất bản trước năm 1900
+
+**Cú pháp SQL:**
+```sql
+DELETE FROM BOOKS
+WHERE year_published < 1900;
+```
+
+# 4. SELECT
+
+**Mục tiêu:**
+Hiển thị các bản ghi có trạng thái đang mượn
+
+**Cú pháp SQL:**
+```sql
+SELECT borrow_id, reader_id, book_id, borrow_date, Statuss
+FROM BOOK_RECORDS
+WHERE Statuss = 'Đang mượn';
+```
+
+**Mục tiêu:**
+Tìm những bản ghi đã trả sách
+
+**Cú pháp SQL:**
+```sql
+SELECT borrow_id, reader_id, book_id, return_date
+FROM BOOK_RECORDS
+WHERE Statuss = 'Đã trả';
+```
 
