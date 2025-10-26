@@ -65,3 +65,16 @@ VALUES (5, 5, 3, '2025-09-30', '2025-10-12', 'Đã trả');
 ```
 
 # 2. UPDATE
+
+**Mục tiêu:**
+Đổi thể loại "1984" từ "Dystopian" thành "Science Fiction"
+
+**Cú pháp SQL:**
+```sql
+UPDATE BOOKS
+SET year_published = 1926
+WHERE book_id = 3;
+```
+
+
+
