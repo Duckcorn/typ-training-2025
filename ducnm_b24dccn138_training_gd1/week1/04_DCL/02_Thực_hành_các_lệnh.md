@@ -34,6 +34,7 @@ FROM reader_user;
 
 **Mục tiêu:**
 Thu hồi toàn bộ quyền trên bảng READERS từ 'Duc Ngo'
+
 **Cú pháp SQL:**
 ```sql
 REVOKE ALL
