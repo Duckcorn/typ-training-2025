@@ -63,3 +63,5 @@ VALUES (4, 4, 5, '2025-10-10', NULL, 'Đang mượn');
 INSERT INTO BOOK_RECORDS (borrow_id, reader_id, book_id, borrow_date, return_date, Statuss)
 VALUES (5, 5, 3, '2025-09-30', '2025-10-12', 'Đã trả');
 ```
+
+# 2. UPDATE
