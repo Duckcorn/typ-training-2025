@@ -50,7 +50,30 @@ END;
 ```
 
 -Có thể sử dụng hàm trong câu lệnh SELECT để kiểm tra trạng thái mượn sách
+
 **Cú pháp SQL:**
 ```sql
 SELECT dbo.CHECK_BOOK(3)
 ```
+
+# 3. CREATE TRIGGER
+
+**Mục tiêu:**
+Trigger này tự động kích hoạt khi có người mượn sách (INSERT vào BOOK_RECORDS), có thể chỉnh sửa để cập nhật cột Statuss hoặc ghi nhật ký giao dịch, giúp giảm thiểu lỗi thao tác thủ công và duy trì tính nhất quán dữ liệu.
+
+**Cú pháp SQL:**
+```sql
+CREATE TRIGGER UpdateBookStatus
+ON BOOK_RECORDS
+AFTER INSERT
+AS
+BEGIN
+    UPDATE BOOKS
+    SET status = 'Đang mượn'
+    FROM BOOKS B
+    INNER JOIN INSERTED I ON B.book_id = I.book_id;
+END;
+```
+-Giải thích: +Trigger gắn với bảng BOOK_RECORDS, tức là khi có thay đổi trên bảng này thì trigger sẽ chạy.
+             +UPDATE BOOKS SET status = 'Đang mượn': Nghĩa là mỗi khi sách được mượn, trạng thái của sách đó sẽ tự động đổi để biết sách đang được mượn.
+             +FROM BOOKS B INNER JOIN INSERTED I ON B.book_id = I.book_id: thực hiện việc so sánh book_id giữa BOOKS và INSERTED, chỉ sách tương ứng với dòng vừa mượn được chọn để cập nhật trạng thái, các sách khác không bị ảnh hưởng.
