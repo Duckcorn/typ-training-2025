@@ -74,6 +74,6 @@ BEGIN
     INNER JOIN INSERTED I ON B.book_id = I.book_id;
 END;
 ```
--Giải thích: +Trigger gắn với bảng BOOK_RECORDS, tức là khi có thay đổi trên bảng này thì trigger sẽ chạy.
-             +UPDATE BOOKS SET status = 'Đang mượn': Nghĩa là mỗi khi sách được mượn, trạng thái của sách đó sẽ tự động đổi để biết sách đang được mượn.
+-Giải thích: +Trigger gắn với bảng BOOK_RECORDS, tức là khi có thay đổi trên bảng này thì trigger sẽ chạy.  
+++UPDATE BOOKS SET status = 'Đang mượn': Nghĩa là mỗi khi sách được mượn, trạng thái của sách đó sẽ tự động đổi để biết sách đang được mượn.
              +FROM BOOKS B INNER JOIN INSERTED I ON B.book_id = I.book_id: thực hiện việc so sánh book_id giữa BOOKS và INSERTED, chỉ sách tương ứng với dòng vừa mượn được chọn để cập nhật trạng thái, các sách khác không bị ảnh hưởng.
