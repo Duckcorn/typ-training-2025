@@ -40,3 +40,13 @@ Xóa dữ liệu khỏi bảng theo điều kiện.
 DELETE FROM ten_bang
 WHERE dieu_kien;
 ```
+
+# 4. SELECT
+**Mục đích:**  
+Truy vấn và lấy dữ liệu từ bảng trong cơ sở dữ liệu.  
+
+**Cú pháp SQL:**
+```sql
+SELECT cot_1, cot_2, ...
+FROM ten_bang
+```
