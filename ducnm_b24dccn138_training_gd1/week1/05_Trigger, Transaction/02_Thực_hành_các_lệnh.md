@@ -97,3 +97,41 @@ VALUES (7, 3, 4, '2025-10-21', NULL, 'Đang mượn');
 COMMIT;
 ```
 **Lưu ý:** COMMIT chỉ cần khi bạn dùng giao dịch thủ công, còn INSERT bình thường thì hệ thống auto-commit giúp bạn không cần gọi COMMIT.
+
+# 5. ROLLBACK
+
+**Mục tiêu:**
+Giả sử bạn thêm một số bản ghi vào BOOK_RECORDS trong một giao dịch nhưng sau khi dùng ROLLBACK thì hủy tất cả thay đổi trong giao dịch, các bản ghi dưới đây sẽ không được lưu
+
+**Cú pháp SQL:**
+```sql
+BEGIN TRANSACTION;
+
+INSERT INTO BOOK_RECORDS (borrow_id, reader_id, book_id, borrow_date, return_date, Statuss)
+VALUES (8, 1, 5, '2025-10-22', NULL, 'Đang mượn');
+
+INSERT INTO BOOK_RECORDS (borrow_id, reader_id, book_id, borrow_date, return_date, Statuss)
+VALUES (9, 2, 1, '2025-10-23', NULL, 'Đang mượn');
+
+ROLLBACK;
+```
+
+# 6. SAVE TRANSACTION
+
+**Mục tiêu:** 
+Tạo ra 2 bản ghi trong BOOK_RECORDS và hủy 2 bản ghi nhưng vẫn lưu được bản ghi thứ nhất vì nó được lưu trước savepoint bằng SAVE TRANSACTION
+
+**Cú pháp SQL:**
+```sql
+BEGIN TRANSACTION;
+
+INSERT INTO BOOK_RECORDS (borrow_id, reader_id, book_id, borrow_date, return_date, Statuss)
+VALUES (10, 3, 2, '2025-10-24', NULL, 'Đang mượn');
+
+SAVE TRANSACTION sp1;  
+
+INSERT INTO BOOK_RECORDS (borrow_id, reader_id, book_id, borrow_date, return_date, Statuss)
+VALUES (11, 4, 3, '2025-10-25', NULL, 'Đang mượn');
+
+ROLLBACK TRANSACTION sp1;
+```
