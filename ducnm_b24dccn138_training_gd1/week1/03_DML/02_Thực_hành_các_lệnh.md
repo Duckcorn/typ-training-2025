@@ -1,6 +1,6 @@
 # 1. INSERT
 
-**Mục đích:**
+**Mục tiêu:**
 Thêm thông tin của một số cuốn sách bao gồm: book_id, tiêu đề, tác giả, thể loại, năm sản xuất vào trong cấu trúc bảng 'BOOKS'
 
 **Cú pháp SQL:**
@@ -20,4 +20,7 @@ VALUES (4, 'Pride and Prejudice', 'Jane Austen', 'Romantic', 1813);
 INSERT INTO BOOKS (book_id, tittle, author, category, year_published)
 VALUES (5, 'The Hobbit', 'J.R.R. Tolkien', 'Fantasy', 1937);
 ```
+
+
+**Mục tiêu:**
 
