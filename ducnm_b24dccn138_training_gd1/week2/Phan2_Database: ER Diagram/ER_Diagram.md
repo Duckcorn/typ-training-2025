@@ -37,7 +37,7 @@
 - Recursive relationship: Các entity tham tham gia nhiều hơn một lần trong các mối quan hệ.
 
 ## 5. Cardinality
-> **Định nghĩa**: dùng để xác định số đặc tính của mối quan hệ giữa hai entity hoặc "entity sets". Có ba loại cardinality chính: 1-1(One-to-One), 1-N(One-to-Many), Many-to-Many(N-N).
+> **Định nghĩa**: dùng để xác định số đặc tính của mối quan hệ giữa hai entity hoặc "entity sets". Có ba loại cardinality chính: 1-1(One-to-One), 1-N(One-to-Many), Many-to-Many(M-N).
 
 - One-to-One(1-1): Mỗi entity ở tập hợp A chỉ liên kết với một entity duy nhất ở tập hợp B, và ngược lại. Ví dụ: Một sinh viên (Student) liên kết với một địa chỉ gửi thư (Mailing Address).
 <img width="787" height="129" alt="Screenshot 2025-11-02 023637" src="https://github.com/user-attachments/assets/bfd8a3a6-831b-47d0-aa9f-f82bba11444a" />
@@ -45,7 +45,7 @@
 - One-to-Many(1-N): Một entity ở tập hợp A có thể liên kết với nhiều entity ở tập hợp B. Ví dụ One-to-Many: Một sinh viên  đăng ký nhiều khóa học, nhưng mỗi khóa học này chỉ liên kết trở lại với một sinh viên trong ví dụ này (theo chiều quan hệ).
 <img width="797" height="161" alt="Screenshot 2025-11-02 023750" src="https://github.com/user-attachments/assets/cf0e8017-e7be-4ebb-9827-dc9602a3fa48" />
 
-- Many-to-Many(N-N): Nhiều entity ở tập hợp A có thể liên kết với nhiều entity ở tập hợp B. Ví dụ: Một nhóm sinh viên liên kết với nhiều giảng viên, và các giảng viên này cũng liên kết với nhiều sinh viên.
+- Many-to-Many(M-N): Nhiều entity ở tập hợp A có thể liên kết với nhiều entity ở tập hợp B. Ví dụ: Một nhóm sinh viên liên kết với nhiều giảng viên, và các giảng viên này cũng liên kết với nhiều sinh viên.
 <img width="777" height="171" alt="Screenshot 2025-11-02 024042" src="https://github.com/user-attachments/assets/1dd6afd3-6a91-41ff-89d7-e3fb4350b728" />
 
 
